@@ -25,9 +25,6 @@ This repository contains the full development and testing environment for Model 
   - `mpc/`: MPC algorithm tests.
   - `ppo/`: Proximal Policy Optimization (PPO) reinforcement learning tests.
 
-- **Library/**, **Logs/**, **Packages/**, **ProjectSettings/**, **Temp/**, **UserSettings/**  
-  Standard project folders for dependencies, logs, settings, and temporary files.
-
 ## Features
 
 - **MPC Algorithm Development**: Core algorithms and utilities for MPC.
