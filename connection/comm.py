@@ -215,28 +215,28 @@ class UnderwaterVehicleGUI:
         btn = ttk.Button(
             states_frame,
             text="Init",
-            command=lambda: self.send_command(CommandTopic(system=6, command=0))
+            command=lambda: self.send_command(CommandTopic(system=6, command=11))
         )
         btn.grid(row=2, column=col, padx=2, pady=2)
 
         btn = ttk.Button(
             states_frame,
             text="Start",
-            command=lambda: self.send_command(CommandTopic(system=6, command=1))
+            command=lambda: self.send_command(CommandTopic(system=6, command=5))
         )
         btn.grid(row=3, column=col, padx=2, pady=2)
 
         btn = ttk.Button(
             states_frame,
             text="Stop",
-            command=lambda: self.send_command(CommandTopic(system=6, command=2))
+            command=lambda: self.send_command(CommandTopic(system=6, command=6))
         )
         btn.grid(row=4, column=col, padx=2, pady=2)
 
         btn = ttk.Button(
             states_frame,
             text="Report",
-            command=lambda: self.send_command(CommandTopic(system=6, command=4))
+            command=lambda: self.send_command(CommandTopic(system=6, command=7))
         )
         btn.grid(row=5, column=col, padx=2, pady=2)
 
