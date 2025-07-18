@@ -184,9 +184,10 @@ class UnityEnvironmentServer(threading.Thread):
                 with env_lock:
                     pos = latest_environment['position']
                     rot = latest_environment['rotation']
+                    print(pos, rot)  # Debug output
                 
                 # Format as comma-separated string
-                data_str = (f"{pos[1]:.4f},{(pos[2]):.4f},{pos[0]:.4f},"
+                data_str = (f"{pos[1]:.4f},{(-pos[2]):.4f},{pos[0]:.4f},"
                             f"{rot[1]:.4f},{rot[2]:.4f},{rot[0]:.4f}")
                 data_bytes = data_str.encode('utf-8')
                 
@@ -314,8 +315,8 @@ def main():
     # Create components
     env_sub = EnvironmentSubscriber(ZMQ_ENV_ENDPOINT)
     sonar_pub = TestSonarPublisher(ZMQ_SONAR_ENDPOINT)
-    unity_env_server = UnityEnvironmentServer(host="192.168.229.107", port=UNITY_ENV_PORT)
-    unity_sonar_server = UnitySonarServer(host="192.168.229.107", port=UNITY_SONAR_PORT)
+    unity_env_server = UnityEnvironmentServer(host="192.168.31.107", port=UNITY_ENV_PORT)
+    unity_sonar_server = UnitySonarServer(host="192.168.31.107", port=UNITY_SONAR_PORT)
     
     # Start components
     env_sub.start()
