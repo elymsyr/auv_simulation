@@ -1,4 +1,4 @@
-# MPC Control System Development Repository
+# AUV Simulation
 
 This repository contains the full development and testing environment for Model Predictive Control (MPC) systems, including simulation, communication, and learning phases.
 
